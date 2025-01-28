@@ -10,10 +10,7 @@ RUN pacman -S sudo python jupyterhub python-pip python-pandas python-numpy pytho
 RUN pip install jupyterlab --break-system-packages
 
 # Create user
-RUN useradd -m -u 1000 jovyan
-RUN usermod -aG wheel jovyan
 RUN echo "root:root" | chpasswd
-RUN echo "jovyan:jovyan" | chpasswd
 
 # Expose JupyterLab port
 EXPOSE 8888
