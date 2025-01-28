@@ -2,9 +2,6 @@ FROM archlinux:latest
 
 USER root
 
-# Add archlinuxcn repo
-RUN echo -e '\n[archlinuxcn]\nServer = https://repo.archlinuxcn.org/$arch' | sudo tee -a /etc/pacman.conf > /dev/null
-
 # Update and install necessary packages
 RUN pacman -Syu --noconfirm
 RUN pacman -S sudo python jupyter-notebook python-pandas python-numpy python-terminado python-matplotlib systemd systemd-sysv --noconfirm
