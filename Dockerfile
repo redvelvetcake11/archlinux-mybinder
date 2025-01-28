@@ -4,7 +4,7 @@ USER root
 
 # Update and install necessary packages
 RUN pacman -Syu --noconfirm
-RUN pacman -S sudo python jupyter-notebook python-pandas python-numpy python-terminado python-matplotlib systemd systemd-sysv --noconfirm
+RUN pacman -S sudo python jupyter-notebook python-pandas python-numpy python-terminado python-matplotlib systemd --noconfirm
 
 # Create user
 RUN useradd -m -u 1000 jovyan
