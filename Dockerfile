@@ -6,7 +6,7 @@ RUN echo -e "\n[jlk]\nServer = https://jlk.fjfi.cvut.cz/arch/repo\nSigLevel = Ne
 
 # Update and install necessary packages
 RUN pacman -Syu --noconfirm
-RUN pacman -S sudo python jupyter-notebook jupyterlab jupyterhub python-pandas python-numpy python-terminado python-matplotlib --noconfirm
+RUN pacman -S sudo python jupyter-notebook jupyterlab jupyterhub python-pandas jupyterlab-widgets python-numpy python-terminado python-matplotlib --noconfirm
 
 # Create user
 RUN useradd -m -u 1000 jovyan
