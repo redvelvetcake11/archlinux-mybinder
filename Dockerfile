@@ -6,7 +6,7 @@ RUN echo -e "\n[jlk]\nServer = https://jlk.fjfi.cvut.cz/arch/repo\nSigLevel = Ne
 
 # Update and install necessary packages
 RUN pacman -Syu --noconfirm
-RUN pacman -S sudo python jupyterhub python-pip python-pandas python-numpy python-terminado doas python-matplotlib repo git --noconfirm
+RUN pacman -S sudo python jupyterhub python-pip python-pandas python-numpy python-terminado doas python-matplotlib repo git ssh rsync --noconfirm
 RUN pip install jupyterlab --break-system-packages
 
 # Create user
